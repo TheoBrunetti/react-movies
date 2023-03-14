@@ -1,4 +1,8 @@
 .header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
     h1 {
         font-size: 3.3rem;
         text-shadow: 2px 3px 0px $color-1;
@@ -6,10 +10,10 @@
         letter-spacing: 2px;
     }
     nav {
-        position: absolute;
         top: 16px;
         left: 16px;
         font-size: 1.3rem;
+        align-self: center;
 
         ul {
             display: flex;
@@ -41,5 +45,12 @@
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .header {
+        flex-direction: column;
+        margin-bottom: 2rem;
     }
 }
